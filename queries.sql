@@ -57,7 +57,7 @@ select c.id_card, count(s.id_sale) as total_sales
 from card c
 join sale s on c.id_card = s.id_card group by c.id_card;
 
--- 9 numero de ventas por trabajo
+-- 9.1 numero de ventas por trabajo
 select c.job_title, count(s.id_sale) as total_sales
 from client c
 join card ca on c.id_client = ca.id_client
@@ -72,7 +72,7 @@ join sale s on s.id_card = ca.id_card
 group by c.id_client;
 
 -- 11 venta minima por cliente
- select c.id_client, min(s.sale_paid) as min_sale
+select c.id_client, min(s.sale_paid) as min_sale
 from client c
 join card ca on c.id_client = ca.id_client
 join sale s on s.id_card = ca.id_card
