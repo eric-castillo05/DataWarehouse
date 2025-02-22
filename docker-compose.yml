@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:17.2
+    container_name: postgres_dataWarehouse
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: tienda
+    ports:
+      - "5433:5432"
+    volumes:
+      - "postgres_data:/var/lib/postgresql/data"
+      - "./sales.sql:/docker-entrypoint-initdb.d/sales.sql"
+
+volumes:
+  postgres_data:
+
