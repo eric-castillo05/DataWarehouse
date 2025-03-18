@@ -66,8 +66,7 @@ GROUP BY to_char(date_sale, 'DD'),
 -- 22
 -- numero de productos vendidos
  
-SELECT SUM(articles) AS total_products_sold 
-FROM sale;   
+select (count(articles)) as products_sold from sale; 
 
 -- 25
 -- promedio de articulos vendidos
