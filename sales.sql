@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: card; Type: TABLE; Schema: public; Owner: root
+-- Name: card; Type: TABLE; Schema: public; Owner: avnadmin
 --
 
 CREATE TABLE public.card (
@@ -32,10 +32,10 @@ CREATE TABLE public.card (
 );
 
 
-ALTER TABLE public.card OWNER TO root;
+ALTER TABLE public.card OWNER TO avnadmin;
 
 --
--- Name: client; Type: TABLE; Schema: public; Owner: root
+-- Name: client; Type: TABLE; Schema: public; Owner: avnadmin
 --
 
 CREATE TABLE public.client (
@@ -53,10 +53,10 @@ CREATE TABLE public.client (
 );
 
 
-ALTER TABLE public.client OWNER TO root;
+ALTER TABLE public.client OWNER TO avnadmin;
 
 --
--- Name: product; Type: TABLE; Schema: public; Owner: root
+-- Name: product; Type: TABLE; Schema: public; Owner: avnadmin
 --
 
 CREATE TABLE public.product (
@@ -66,10 +66,10 @@ CREATE TABLE public.product (
 );
 
 
-ALTER TABLE public.product OWNER TO root;
+ALTER TABLE public.product OWNER TO avnadmin;
 
 --
--- Name: sale; Type: TABLE; Schema: public; Owner: root
+-- Name: sale; Type: TABLE; Schema: public; Owner: avnadmin
 --
 
 CREATE TABLE public.sale (
@@ -82,10 +82,10 @@ CREATE TABLE public.sale (
 );
 
 
-ALTER TABLE public.sale OWNER TO root;
+ALTER TABLE public.sale OWNER TO avnadmin;
 
 --
--- Name: sale_product; Type: TABLE; Schema: public; Owner: root
+-- Name: sale_product; Type: TABLE; Schema: public; Owner: avnadmin
 --
 
 CREATE TABLE public.sale_product (
@@ -94,10 +94,10 @@ CREATE TABLE public.sale_product (
 );
 
 
-ALTER TABLE public.sale_product OWNER TO root;
+ALTER TABLE public.sale_product OWNER TO avnadmin;
 
 --
--- Data for Name: card; Type: TABLE DATA; Schema: public; Owner: root
+-- Data for Name: card; Type: TABLE DATA; Schema: public; Owner: avnadmin
 --
 
 COPY public.card (id_card, card, card_numbers, id_client) FROM stdin;
@@ -16105,7 +16105,7 @@ COPY public.card (id_card, card, card_numbers, id_client) FROM stdin;
 
 
 --
--- Data for Name: client; Type: TABLE DATA; Schema: public; Owner: root
+-- Data for Name: client; Type: TABLE DATA; Schema: public; Owner: avnadmin
 --
 
 COPY public.client (id_client, first_name, last_name, adreess, country, email, cellphone, telephone, job_title, gender, college) FROM stdin;
@@ -18080,7 +18080,7 @@ COPY public.client (id_client, first_name, last_name, adreess, country, email, c
 1964	Sebastien	Birchall	99 Schmedeman Lane	China	sbirchallqr@answers.com	248-922-2575	405-773-7370	Community Outreach Specialist	Male	Tianjin Polytechnic University
 1965	Mile	McElrath	4 Brown Alley	Japan	mmcelrathqs@theglobeandmail.com	913-420-6391	767-511-2716	Account Representative II	Male	Nagasaki Institute of Applied Science
 1966	Putnem	Gresswood	33477 Clove Crossing	Philippines	pgresswoodqt@kickstarter.com	430-456-9562	147-615-8823	Recruiter	Male	University of Mindanao
-1967	Harlin	Scandroot	91791 Main Center	France	hscandrootqu@oracle.com	596-635-8085	589-315-2837	Senior Developer	Male	Ecole Nationale Supérieure d'Electronique, d'Electrotechnique, d'Informatique et d'Hydraulique de Toulouse
+1967	Harlin	Scandavnadmin	91791 Main Center	France	hscandavnadminqu@oracle.com	596-635-8085	589-315-2837	Senior Developer	Male	Ecole Nationale Supérieure d'Electronique, d'Electrotechnique, d'Informatique et d'Hydraulique de Toulouse
 1968	Thomas	Marxsen	789 Bartelt Avenue	Malaysia	tmarxsenqv@soup.io	766-535-6592	885-110-9319	Structural Analysis Engineer	Male	Kuala Lumpur Infrastructure University College
 1969	Lianna	Easton	2927 Hollow Ridge Court	Japan	leastonqw@exblog.jp	916-433-6232	421-968-5867	Structural Engineer	Female	Shibaura Institute of Technology
 5354	Babb	Eldin	2788 Summerview Alley	Indonesia	beldin9t@nymag.com	142-337-2738	495-911-1844	Professor	Female	Universitas Tadulako
@@ -25473,7 +25473,7 @@ COPY public.client (id_client, first_name, last_name, adreess, country, email, c
 9357	Carita	Whisson	20 Brickson Park Drive	China	cwhisson9w@virginia.edu	957-766-7298	617-540-5932	Environmental Tech	Female	Beijing University of Science and Technology
 9358	Kirby	MacMeeking	092 Little Fleur Lane	China	kmacmeeking9x@columbia.edu	556-419-1241	887-951-0641	Senior Cost Accountant	Male	University of Electronic Science and Technology of China
 9359	Any	Troth	88 Darwin Park	Cuba	atroth9y@globo.com	144-269-5490	225-738-8885	Internal Auditor	Male	Universidad de Granma
-9360	Giovanna	Croot	977 Truax Parkway	Croatia	gcroot9z@blogs.com	625-858-7523	993-556-9622	Nuclear Power Engineer	Female	University of Osijek
+9360	Giovanna	Cavnadmin	977 Truax Parkway	Croatia	gcavnadmin9z@blogs.com	625-858-7523	993-556-9622	Nuclear Power Engineer	Female	University of Osijek
 9361	Dalton	Davey	0789 Jenna Point	China	ddaveya0@utexas.edu	262-931-3277	472-318-0589	Senior Developer	Male	Urumqi Vocational University
 9362	Gareth	Petford	421 Anhalt Circle	Jordan	gpetforda1@gmpg.org	525-987-6910	666-914-4047	Food Chemist	Male	Al al-Bayt University
 9363	Cherey	Worgan	5421 Crowley Park	Russia	cworgana2@facebook.com	237-436-9865	814-580-7164	Operator	Female	Moscow Power Engineering Institute (Technical University)
@@ -28983,7 +28983,7 @@ COPY public.client (id_client, first_name, last_name, adreess, country, email, c
 12863	Nappie	Ebbin	90 Park Meadow Pass	Japan	nebbinny@xinhuanet.com	209-674-0925	864-638-3723	Junior Executive	Male	Soka University
 12864	Abbe	Gallaway	8220 Boyd Street	Ukraine	agallawaynz@army.mil	828-761-1890	669-102-7885	Occupational Therapist	Male	Ukrainian Medical Stomatological Academy
 12865	Griswold	Iacomini	4 Swallow Circle	Japan	giacominio0@opera.com	294-748-7342	215-403-3694	Clinical Specialist	Male	Hiroshima Institute of Technology
-12866	Herold	Rootes	03 Corben Park	Macedonia	hrooteso1@huffingtonpost.com	250-710-4539	303-884-5148	Help Desk Operator	Male	University Goce Delcev
+12866	Herold	Rootes	03 Corben Park	Macedonia	havnadmineso1@huffingtonpost.com	250-710-4539	303-884-5148	Help Desk Operator	Male	University Goce Delcev
 12867	Evie	Wolverson	1302 Maple Point	Syria	ewolversono2@yellowpages.com	341-213-9703	842-575-1015	Health Coach I	Female	Damascus University
 12868	Chuck	Gapper	4 Holy Cross Center	China	cgappero3@simplemachines.org	122-643-2386	206-681-6312	Administrative Assistant II	Male	Southwest Jiaotong University
 12869	Boigie	McEachern	20 Sommers Terrace	Philippines	bmceacherno4@fastcompany.com	459-577-5049	546-786-3509	Librarian	Male	University of the East, Coloocan
@@ -32113,7 +32113,7 @@ COPY public.client (id_client, first_name, last_name, adreess, country, email, c
 
 
 --
--- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: root
+-- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: avnadmin
 --
 
 COPY public.product (id_product, product, price) FROM stdin;
@@ -33642,7 +33642,7 @@ COPY public.product (id_product, product, price) FROM stdin;
 1523	Muffin - Mix - Bran And Maple 15l	3592.12
 1524	Cheese - Wine	5919.36
 1525	Cheese - Pont Couvert	3263.26
-1526	Arrowroot	3515.95
+1526	Arrowavnadmin	3515.95
 1527	Beef - Tenderloin	8866.28
 1528	Tomatoes - Heirloom	8251.55
 1529	Dill Weed - Dry	6203.71
@@ -35310,7 +35310,7 @@ COPY public.product (id_product, product, price) FROM stdin;
 3191	Bouillion - Fish	4893.53
 3192	Squid - Tubes / Tenticles 10/20	9308.68
 3193	Sausage - Meat	7090.98
-3194	Arrowroot	4168.41
+3194	Arrowavnadmin	4168.41
 3195	Cheese - Brick With Onion	6250.47
 3196	Cabbage Roll	1792.50
 3197	Beer - Blue Light	7496.72
@@ -36121,7 +36121,7 @@ COPY public.product (id_product, product, price) FROM stdin;
 
 
 --
--- Data for Name: sale; Type: TABLE DATA; Schema: public; Owner: root
+-- Data for Name: sale; Type: TABLE DATA; Schema: public; Owner: avnadmin
 --
 
 COPY public.sale (id_sale, date_sale, time_sale, sale_paid, articles, id_card) FROM stdin;
@@ -44129,7 +44129,7 @@ COPY public.sale (id_sale, date_sale, time_sale, sale_paid, articles, id_card) F
 
 
 --
--- Data for Name: sale_product; Type: TABLE DATA; Schema: public; Owner: root
+-- Data for Name: sale_product; Type: TABLE DATA; Schema: public; Owner: avnadmin
 --
 
 COPY public.sale_product (id_sale, id_product) FROM stdin;
@@ -107963,7 +107963,7 @@ COPY public.sale_product (id_sale, id_product) FROM stdin;
 
 
 --
--- Name: card card_pkey; Type: CONSTRAINT; Schema: public; Owner: root
+-- Name: card card_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
 --
 
 ALTER TABLE ONLY public.card
@@ -107971,7 +107971,7 @@ ALTER TABLE ONLY public.card
 
 
 --
--- Name: client client_pkey; Type: CONSTRAINT; Schema: public; Owner: root
+-- Name: client client_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
 --
 
 ALTER TABLE ONLY public.client
@@ -107979,7 +107979,7 @@ ALTER TABLE ONLY public.client
 
 
 --
--- Name: product product_pkey; Type: CONSTRAINT; Schema: public; Owner: root
+-- Name: product product_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
 --
 
 ALTER TABLE ONLY public.product
@@ -107987,7 +107987,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- Name: sale sale_pkey; Type: CONSTRAINT; Schema: public; Owner: root
+-- Name: sale sale_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
 --
 
 ALTER TABLE ONLY public.sale
@@ -107995,42 +107995,42 @@ ALTER TABLE ONLY public.sale
 
 
 --
--- Name: card_card_idx; Type: INDEX; Schema: public; Owner: root
+-- Name: card_card_idx; Type: INDEX; Schema: public; Owner: avnadmin
 --
 
 CREATE INDEX card_card_idx ON public.card USING btree (card);
 
 
 --
--- Name: client_country_idx; Type: INDEX; Schema: public; Owner: root
+-- Name: client_country_idx; Type: INDEX; Schema: public; Owner: avnadmin
 --
 
 CREATE INDEX client_country_idx ON public.client USING btree (country);
 
 
 --
--- Name: client_job_title_idx; Type: INDEX; Schema: public; Owner: root
+-- Name: client_job_title_idx; Type: INDEX; Schema: public; Owner: avnadmin
 --
 
 CREATE INDEX client_job_title_idx ON public.client USING btree (job_title);
 
 
 --
--- Name: product_product_idx; Type: INDEX; Schema: public; Owner: root
+-- Name: product_product_idx; Type: INDEX; Schema: public; Owner: avnadmin
 --
 
 CREATE INDEX product_product_idx ON public.product USING btree (product);
 
 
 --
--- Name: sale_date_sale_idx; Type: INDEX; Schema: public; Owner: root
+-- Name: sale_date_sale_idx; Type: INDEX; Schema: public; Owner: avnadmin
 --
 
 CREATE INDEX sale_date_sale_idx ON public.sale USING btree (date_sale);
 
 
 --
--- Name: card c_id_cliente_fk; Type: FK CONSTRAINT; Schema: public; Owner: root
+-- Name: card c_id_cliente_fk; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
 --
 
 ALTER TABLE ONLY public.card
@@ -108038,7 +108038,7 @@ ALTER TABLE ONLY public.card
 
 
 --
--- Name: sale s_id_card_fk; Type: FK CONSTRAINT; Schema: public; Owner: root
+-- Name: sale s_id_card_fk; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
 --
 
 ALTER TABLE ONLY public.sale
@@ -108046,7 +108046,7 @@ ALTER TABLE ONLY public.sale
 
 
 --
--- Name: sale_product s_id_sale_fk; Type: FK CONSTRAINT; Schema: public; Owner: root
+-- Name: sale_product s_id_sale_fk; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
 --
 
 ALTER TABLE ONLY public.sale_product

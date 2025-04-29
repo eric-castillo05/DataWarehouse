@@ -63,3 +63,39 @@ class Transform:
         print(result_df)
 
         return result_df[["pais"]]
+
+    def transform_years(self) -> pd.DataFrame:
+        """Returns the years DataFrame as is (no transformation needed)."""
+        print("Transforming years DataFrame:")
+        print(self.df)
+        return self.df[["year"]]
+
+    def transform_months(self) -> pd.DataFrame:
+        """Transforms month numbers to Spanish month names."""
+        print("Transforming months DataFrame:")
+        print(self.df)
+
+        month_names = {
+            1: "Enero", 2: "Febrero", 3: "Marzo", 4: "Abril", 5: "Mayo", 6: "Junio",
+            7: "Julio", 8: "Agosto", 9: "Septiembre", 10: "Octubre", 11: "Noviembre", 12: "Diciembre"
+        }
+        self.df["month_name"] = self.df["month"].map(month_names)
+        result_df = self.df[["month_name"]]
+        print("Transformed months DataFrame:")
+        print(result_df)
+        return result_df
+
+    def transform_weekdays(self) -> pd.DataFrame:
+        """Transforms dates to Spanish weekday names."""
+        print("Transforming weekdays DataFrame:")
+        print(self.df)
+
+        weekday_names = {
+            0: "Lunes", 1: "Martes", 2: "Miércoles", 3: "Jueves", 4: "Viernes",
+            5: "Sábado", 6: "Domingo"
+        }
+        self.df["weekday_name"] = self.df["date"].apply(lambda x: weekday_names[x.weekday()])
+        result_df = self.df[["weekday_name"]].drop_duplicates().sort_values(by="weekday_name")
+        print("Transformed weekdays DataFrame:")
+        print(result_df)
+        return result_df
