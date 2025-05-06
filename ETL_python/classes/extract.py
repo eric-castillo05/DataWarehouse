@@ -55,7 +55,7 @@ class Extract:
 
         years = pd.DataFrame({"year": sorted(set(date.year for date in dates))})
         months = pd.DataFrame({"month": sorted(set(date.month for date in dates))})
-        weekdays = pd.DataFrame({"date": dates})  # Guardar fechas completas para calcular días
+        weekdays = pd.DataFrame({"date": dates})  # Guarda
 
         return years, months, weekdays
 
@@ -79,8 +79,9 @@ class Extract:
                         cl.country,
                         cl.gender,
                         p.product,
-                        EXTRACT(DAY FROM s.date_sale) AS dia,
+                        EXTRACT(DAY FROM s.date_sale) AS day,
                         EXTRACT(YEAR FROM s.date_sale) AS year,
+                        EXTRACT(MONTH FROM s.date_sale) AS month,
                         COUNT(s.sale_paid) AS count_sale_paid,
                         SUM(s.sale_paid) AS sum_sale_paid,
                         MIN(s.sale_paid) AS min_sale_paid,
@@ -92,12 +93,12 @@ class Extract:
                     JOIN client cl ON c.id_client = cl.id_client
                     JOIN sale_product sp ON s.id_sale = sp.id_sale
                     JOIN product p ON sp.id_product = p.id_product
-                    GROUP BY cl.country, cl.gender, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale)
-                    ORDER BY cl.country, cl.gender, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale)
+                    GROUP BY cl.country, cl.gender, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale), EXTRACT(MONTH FROM s.date_sale)
+                    ORDER BY cl.country, cl.gender, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale), EXTRACT(MONTH FROM s.date_sale)
                 """)
                 cursor.execute(query)
                 results = cursor.fetchall()
-                columns = ["country", "gender", "product", "dia", "year", "count_sale_paid", "sum_sale_paid", "min_sale_paid", "max_sale_paid", "std_sale_paid", "mean_sale_paid"]
+                columns = ["country", "gender", "product", "day", "year", "month", "count_sale_paid", "sum_sale_paid", "min_sale_paid", "max_sale_paid", "std_sale_paid", "mean_sale_paid"]
                 df = pd.DataFrame(results, columns=columns)
                 return df
         except psycopg2.Error as e:

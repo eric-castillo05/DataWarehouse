@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-
+    
 class Transform:
     def __init__(self, df: pd.DataFrame):
         if df is None or df.empty:
