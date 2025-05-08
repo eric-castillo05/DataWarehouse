@@ -79,6 +79,7 @@ class Extract:
                         cl.country,
                         cl.gender,
                         p.product,
+                        c.card,
                         EXTRACT(DAY FROM s.date_sale) AS day,
                         EXTRACT(YEAR FROM s.date_sale) AS year,
                         EXTRACT(MONTH FROM s.date_sale) AS month,
@@ -93,12 +94,12 @@ class Extract:
                     JOIN client cl ON c.id_client = cl.id_client
                     JOIN sale_product sp ON s.id_sale = sp.id_sale
                     JOIN product p ON sp.id_product = p.id_product
-                    GROUP BY cl.country, cl.gender, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale), EXTRACT(MONTH FROM s.date_sale)
-                    ORDER BY cl.country, cl.gender, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale), EXTRACT(MONTH FROM s.date_sale)
+                    GROUP BY cl.country, cl.gender, c.card, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale), EXTRACT(MONTH FROM s.date_sale)
+                    ORDER BY cl.country, cl.gender, c.card, p.product, EXTRACT(DAY FROM s.date_sale), EXTRACT(YEAR FROM s.date_sale), EXTRACT(MONTH FROM s.date_sale)
                 """)
                 cursor.execute(query)
                 results = cursor.fetchall()
-                columns = ["country", "gender", "product", "day", "year", "month", "count_sale_paid", "sum_sale_paid", "min_sale_paid", "max_sale_paid", "std_sale_paid", "mean_sale_paid"]
+                columns = ["country", "gender", "product", "card", "day", "year", "month", "count_sale_paid", "sum_sale_paid", "min_sale_paid", "max_sale_paid", "std_sale_paid", "mean_sale_paid"]
                 df = pd.DataFrame(results, columns=columns)
                 return df
         except psycopg2.Error as e:
